@@ -33,6 +33,7 @@ def sigmoid(a):
     return 1/(1+np.exp(-a))
 
 #forward function
+#this function is responsible for making predictions
 #passing on the X : Data Matrix, W : Weight matrix , b : bias
 def forward(X,W,b):
     return sigmoid(X.dot(W) + b)
@@ -40,9 +41,11 @@ def forward(X,W,b):
 #function that will give us the classification rate
 # it returns the mean of Y==P
 def classificationRate(Y,P):
+    #This may look like it will return an array of boolean but it actually returns 0s and 1s
+    #It will divide the number of correct prediction by total number of predictions
     return np.mean(Y==P)
 
-#corss_entropy function this is gonna take in Targets and PofY
+#corss_entropy function this is gonna take in Targets which is Ytrain and Ytest and PofY
 def cross_entropy(T,pY):
     return -np.mean(T*np.log(pY) + (1-T)*np.log(1-pY))
 
@@ -56,9 +59,11 @@ learning_rate = 0.001
 # we are gonna go for 10,000 epox
 for i in range(10000):
     #in each iteration calculate pYtrain
-    #passing Xtrain through the logistic regression
+    #passing Xtrain through the logistic regression to make predictions on the train dataset
+    # P_Y_given_X = pYtrain in training dataset
     pYtrain = forward(Xtrain , W, b)
-    #passing Xtest through the logistic regression
+    #passing Xtest through the logistic regression to make predictions on the test dataset
+    # P_Y_given_X = pYtest in test dataset
     pYtest = forward(Xtest, W, b)
 
     #calculate the training cost

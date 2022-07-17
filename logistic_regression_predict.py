@@ -15,6 +15,7 @@ b = 0
 def sigmoid(a):
     return 1/(1+np.exp(-a))
 
+#this function is responsible for making predictions
 def forward(X, W, b):
     return sigmoid(X.dot(W)+b)
 
