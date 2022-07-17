@@ -6,5 +6,5 @@
 ![](util_pics/1.png)
 
 #### Gradient descent :
-![](util_pics/2.png)
-![](util_pics/3.jpg)
+![](util_pics/2.jpg)
+![](util_pics/3.png)
