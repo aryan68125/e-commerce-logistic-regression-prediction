@@ -1,2 +1,4 @@
 # e commerce ML project
-## This is a Machine learning prokect that uses Logistic regression model to predict wheather the customer will buy something or leave the website based on the user   data in form of csv , sql table or xcel spreadsheet
+## This is a Machine learning project that uses Logistic regression model to predict the user actions on our e-commerce website
+### For example :-
+#### If the user is gonna -> bounce (Exit the website), not completing the checkout after adding the product into his/her cart etc.
