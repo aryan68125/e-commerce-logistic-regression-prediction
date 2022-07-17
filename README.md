@@ -7,4 +7,4 @@
 
 #### Gradient descent :
 ![](util_pics/2.png)
-![](util_pics/3.png)
+![](util_pics/3.jpg)
